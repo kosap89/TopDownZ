@@ -283,6 +283,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hitParticles: {fileID: 7127607141202724217, guid: 753a0a1495358b54aba7cbfa71d5c37f, type: 3}
-  _travelSpeed: 10
+  _travelSpeed: 15
   _damage: 1
   _rb: {fileID: 1775730566071117067}
+  _enemyHitSound: {fileID: 8300000, guid: a6918b2d20e1d404c8575960e8b99d41, type: 3}
