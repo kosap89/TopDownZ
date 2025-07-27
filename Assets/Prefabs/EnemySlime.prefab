@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 422615429731666827}
   - component: {fileID: 3688010115555681557}
   - component: {fileID: 710656931019192734}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: DamageDealer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -198,7 +198,7 @@ Transform:
   m_GameObject: {fileID: 4694028386752322510}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.0243844, y: 1.3739569, z: -0.10420632}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
