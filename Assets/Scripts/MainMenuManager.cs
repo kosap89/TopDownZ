@@ -4,6 +4,8 @@ public class MainMenuManager : MonoBehaviour
 {
     [SerializeField] private CanvasGroup _mainMenuButtonsCG;
     [SerializeField] private CanvasGroup _quitConfirmationCG;
+    [SerializeField] private CanvasGroup _settingsMenuCG;
+
     CanvasGroup _mainMenuCG;
 
     private void Awake()
@@ -33,6 +35,24 @@ public class MainMenuManager : MonoBehaviour
         CanvasGroupSetState(_quitConfirmationCG, false);
         CanvasGroupSetState(_mainMenuButtonsCG, true);
     }
+
+    [SerializeField] private GameObject _backButtonGO;
+
+    public void OpenSettingsMenu()
+    {
+        CanvasGroupSetState(_mainMenuButtonsCG, false);
+        CanvasGroupSetState(_settingsMenuCG, true);
+        _backButtonGO.SetActive(true); // N‰ytet‰‰n nappi
+    }
+
+    public void CloseSettingsMenu()
+    {
+        CanvasGroupSetState(_settingsMenuCG, false);
+        CanvasGroupSetState(_mainMenuButtonsCG, true);
+        _backButtonGO.SetActive(false); // Piilotetaan nappi
+    }
+
+
 
     public void Play()
     {

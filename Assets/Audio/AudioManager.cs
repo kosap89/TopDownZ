@@ -23,6 +23,17 @@ public class AudioManager : MonoBehaviour
         PlayAudio(_music, SoundType.Music, 1.0f, true);
     }
 
+    void Start()
+    {
+        float master = PlayerPrefs.GetFloat("Settings.MasterVolume", 1f);
+        float music = PlayerPrefs.GetFloat("Settings.MusicVolume", 1f);
+        float sfx = PlayerPrefs.GetFloat("Settings.SFXVolume", 1f);
+
+        ChangeMasterVolume(master);
+        ChangeMusicVolume(music);
+        ChangeSFXVolume(sfx);
+    }
+
     public void ChangeMasterVolume(float volume)
     {
         _mixer.SetFloat(MASTER_VOLUME_NAME, Mathf.Log10(volume) * 20);
@@ -85,17 +96,4 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
